@@ -41,13 +41,21 @@ function polish_font () {
 	h.className = 'ibm-plex-sans-semibold';
     });
 
-
 }
+
+function polish_img() {
+    const images = document.querySelectorAll('.content img');
+    images.forEach(img => {
+	img.classList.add('article_img');
+    });
+}
+
 
 
 function polish() {
     convertMarkdownToHtml();
     polish_font();
+    polish_img();
 }
 
 
